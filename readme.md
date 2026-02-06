@@ -106,6 +106,76 @@ This project is licensed under the ISC License.
 - [MongoDB Node.js Driver](https://docs.mongodb.com/drivers/node/)
 - [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 
+## 📚 Node.js vs Express.js
+
+### 🟢 Node.js
+
+**What it is:**
+👉 A JavaScript runtime
+
+**What it does:**
+- Runs JavaScript outside the browser
+- Gives access to system things (files, ports, network)
+- Can create servers but with a lot of code
+
+**Example (pure Node.js server):**
+```javascript
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  res.end("Hello from Node.js");
+});
+
+server.listen(3000);
+```
+
+### 🔵 Express.js
+
+**What it is:**
+👉 A web framework built on top of Node.js
+
+**What it does:**
+- Makes backend work easy and fast
+- Handles routes, APIs, middleware
+- Perfect for REST APIs
+
+**Example (Express.js server):**
+```javascript
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Hello from Express");
+});
+
+app.listen(3000);
+```
+
+### 📊 Key Difference Table
+
+| Feature | Node.js | Express.js |
+|---------|---------|------------|
+| Type | Runtime | Framework |
+| Can run JS? | ✅ Yes | ❌ No (needs Node) |
+| API creation | Harder | Easy |
+| Routing | Manual | Built-in |
+| Middleware | ❌ | ✅ |
+| Used alone? | Yes | No |
+
+### 🧠 Simple way to remember
+
+Node.js is the engine 🚗  
+Express.js is the steering wheel 🕹️
+
+You can't use Express without Node, but you can use Node without Express (just harder).
+
+### 🏗️ In real projects (MERN stack)
+
+- **Node.js** → runs the backend
+- **Express.js** → builds APIs  
+- **MongoDB** → database
+- **React** → frontend
+
 ---
 
 **Happy Coding! 🎉**
