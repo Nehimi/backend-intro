@@ -1,5 +1,33 @@
 # Node.js Backend Tutorial
 
+
+## steps to write code
+1. models // because controller and routers is depends on models
+3. middleware/ ⬅️ THIS WAS MISSING
+
+Logic that runs before controllers
+
+✔ middleware/auth.middleware.js
+✔ middleware/error.middleware.js
+2. controllers // b/c controller use models
+3. routers // routers call the controller
+4. app.js // App connects midleware and routers
+5. config // db.js and constants
+6. index.js
+
+## ❓ What app.js really is
+✅ app.js = APPLICATION SETUP FILE
+
+Its job is to:
+
+Create the Express app
+
+Register middlewares
+
+Register routes
+
+Export the app
+
 A comprehensive introduction to backend development using Node.js, Express, and MongoDB Atlas.
 
 ## 🚀 Features
