@@ -1,9 +1,10 @@
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import app from "./app.js";
-const PORT=process.env.PORT || 8000;
+const PORT=process.env.PORT || 9999;
 dotenv.config();
 const startServer = async () => {
+    
     try {
         await connectDB();
         console.log("Database connection enabled");
